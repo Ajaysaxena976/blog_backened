@@ -25,6 +25,9 @@ app.use(morgan('dev'))
 app.use('/api/v1/user', userRoutes)
 app.use('/api/v1/blog', blogRoutes)
 
+app.get('/',(req,res)=>{
+    return res.send("hello")
+})
 //listen
 app.listen(process.env.PORT , ()=>{
     console.log(`Server is running on ${process.env.PORT}`.bgCyan.white)
